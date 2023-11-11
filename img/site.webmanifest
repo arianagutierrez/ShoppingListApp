@@ -1,0 +1,12 @@
+{
+    "name":"Add to Cart",
+    "short_name":"Add to Cart",
+    "icons":
+        [
+            {"src":"/android-chrome-192x192.png","sizes":"192x192","type":"image/png"},
+            {"src":"/android-chrome-512x512.png","sizes":"512x512","type":"image/png"}
+        ],
+    "theme_color":"linear-gradient(to top left, #CF84BB 0%, #CF84BB 32%, #FFFF2E 76%, #FFFF2E 100%)",
+    "background_color":"linear-gradient(to top left, #CF84BB 0%, #CF84BB 32%, #FFFF2E 76%, #FFFF2E 100%)",
+    "display":"standalone"
+}

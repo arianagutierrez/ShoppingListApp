@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --color-white: #fff;
+    --color-black: #000;
+}
+
+@mixin flex-column-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    @include flex-column-center();
+    min-height: 100vh;
+    background: linear-gradient(to top left, #CF84BB 0%, #CF84BB 32%, #FFFF2E 76%, #FFFF2E 100%);
+    user-select: none; //avoids selection of elements
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+  
+::-webkit-scrollbar-thumb {
+    background-color: #FFFF2E;
+    border-radius: 15px;
+}
+  
+::-webkit-scrollbar-track {
+    background-color: #CF84BB;
+}
+
+h1{
+    margin: 2rem 2rem 3.5rem;
+    font-family: 'Itim', cursive;
+    font-size: 4rem;
+    text-transform: uppercase;
+    letter-spacing: .25rem;
+    text-shadow: 0px 3px 7px var(--color-white);
+    text-align: center
+}
+
+.add-item-form{
+    @include flex-column-center();
+    max-width: 320px;
+    border: 5px solid brown;
+    border-radius: .625rem;
+    padding: 2.5rem 3rem;
+    margin: 0 2rem;
+    box-shadow: 0px 8px 8px 1px var(--color-black);
+    img{
+        width: 180px;
+    }
+    input, button{
+        width: 220px;
+        height: 45px;
+        font-family: 'Love Ya Like A Sister', cursive;
+        font-size: 1.4rem;
+        text-align: center;
+        border-radius: 0.5rem;
+        padding: .25rem 0;
+    }
+
+    input{
+        border: none;
+        margin: 2rem 0;
+        border: 2px solid var(--color-white);
+        &:hover{
+            border: 2px solid brown;
+        }
+    }
+    button{
+        color: var(--color-white);
+        background-color: rgb(154, 22, 22);
+        text-transform: uppercase;
+        letter-spacing: .1rem;
+        border: 2px solid var(--color-black);
+        box-shadow: 0px 3px 6px var(--color-black);
+        transform: translateY(0);
+        transition: transform .4s ease-in-out;
+        &:hover{
+            border: 2px solid var(--color-white);
+            transform: translateY(-3.5px);
+            background-color: #4e2744;
+            cursor: pointer;
+        }
+    }
+}
+
+.shopping-list{
+    font-family: 'Shantell Sans', cursive;
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 4rem 2rem 3rem;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    li{
+       padding: .75rem 2rem;
+       border-radius: .5rem;
+       box-shadow: 0px 5px 7px 2px var(--color-black);
+       background-color: var(--color-white);
+       flex-grow: 1;
+       text-align: center;
+       text-transform: lowercase;
+       &:hover{
+            background-color: #f5f553;
+            cursor: pointer;
+       }
+    }
+}
