@@ -1,11 +1,11 @@
 @media screen and (max-width: 950px) {
-    .rightSide .shopping-list{
+    .items-list .shopping-list{
         grid-template-columns: repeat(1, 1fr);
     }
 }
 
 @media screen and (max-width: 490px) {
-    .rightSide .shopping-list{
+    .items-list .shopping-list{
         font-size: 1.5rem;
         li .item-details{
             gap: .65rem;
@@ -14,7 +14,7 @@
 }
 
 @media screen and (max-width: 425px) {
-    .rightSide .shopping-list{
+    .items-list .shopping-list{
         font-size: 1.25rem;
     }
 
@@ -29,12 +29,16 @@
 }
 
 @media screen and (max-width: 360px) {
-    .leftSide{
+    .copyright p{
+        font-size: .88rem;
+    }
+
+    .add-item-form{
         width: 200px;
         padding: 1.5rem;
     }
 
-    .rightSide .shopping-list{
+    .items-list .shopping-list{
         font-size: 1rem;
     }
 }
