@@ -135,6 +135,8 @@ onValue(shoppingListInDB, function(snapshot) {
             addItemToShoopingList(currentItem)
         }
     } else {
+        clearShoopingList()
+        
         const textList = document.createElement('span')
         textList.classList.add('textList')
         textList.textContent = "No items here... yet"
