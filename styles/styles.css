@@ -16,16 +16,15 @@
 body {
   min-height: 100vh;
   background: url(/img/market.jpeg) no-repeat center/cover;
-  display: flex;
-  place-items: center;
-  justify-content: center;
 }
 
 .contentApp {
   width: 100%;
   min-height: 100vh;
+  margin: 2.5rem 0 1.5rem;
   flex-direction: column;
   place-items: center;
+  justify-content: space-between;
   position: relative;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -48,7 +47,6 @@ body {
 
 .leftSide {
   width: 250px;
-  margin-top: 2rem;
   padding: 2rem;
   display: flex;
   flex-direction: column;
@@ -140,6 +138,22 @@ body {
 }
 .rightSide .shopping-list li .item-details .quantity-item {
   color: var(--color-darkRed);
+}
+
+.copyright {
+  width: 90%;
+  display: flex;
+  justify-content: right;
+}
+.copyright p {
+  font-family: var(--font-text);
+  line-height: 1.5rem;
+  text-align: right;
+  color: var(--color-black);
+  font-weight: 600;
+  background-color: rgba(255, 255, 255, 0.65);
+  padding: 0.5rem 0.75rem 0.5rem 1.5rem;
+  border-radius: 60px 0px 0px 60px;
 }
 
 .modal {
