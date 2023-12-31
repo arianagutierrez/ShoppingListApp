@@ -6,24 +6,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add to Cart</title>
     <link rel="stylesheet" href="./styles/styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Itim&family=Love+Ya+Like+A+Sister&family=Shantell+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="apple-touch-icon" sizes="180x180" href="./img/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon-16x16.png">
     <link rel="manifest" href="./img/site.webmanifest">
 </head>
 <body>
-    <h1 class="title" id="title">Shopping List</h1>
-
-    <div class="add-item-form">
-        <img src="./img/bear-shopping.png" alt="bear-shopping"/>
-        <input type="text" id="input-field" placeholder="what to buy...">
-        <button id="add-button">Add to cart</button>
+    <div class="contentApp">
+        <div class="leftSide add-item-form">
+            <div class="input-control">
+                <input type="text" class="input-field" id="input-field" placeholder="what to buy...">
+                <input type="number" class="input-quantity" id="input-quantity" placeholder="how many..." >
+                <select class="input-type" id="input-type">
+                    <option value="" disabled selected>of...</option>
+                    <option value="und">und</option>
+                    <option value="kg">kg</option>
+                    <option value="g">g</option>
+                    <option value="bt 1L">bt 1L</option>
+                    <option value="bt 750ml">bt 750ml</option>
+                    <option value="bt 750ml">bt 500ml</option>
+                    <option value="pack (x2)">pack(x2)</option>
+                    <option value="pack (x4)">pack(x4)</option>
+                    <option value="pack (x6)">pack(x6)</option>
+                </select>
+            </div>
+            <button id="add-button">
+                <span>Add to cart</span>
+                <i class="fas fa-shopping-cart"></i>
+            </button>
+        </div>
+        
+        <div class="rightSide">
+            <ul class="shopping-list"></ul>
+        </div>
     </div>
 
-    <ul class="shopping-list"></ul>
+    <div class="modal">
+        <div class="contentModal">
+            <h1 class="titleApp">Let's do the shopping list</h1>
+            <div class="welcomeContent">
+                <p>¡Hola familia!</p>
+                <img src="./img/bear-shopping.png" alt="bear-shopping"/>
+                <p>Something to buy?</p>
+            </div>
+            <button class="addItem">
+                <span>Add item</span>
+                <i class="fas fa-plus-circle"></i>
+            </button>
+        </div>
+    </div>
+
+    <div class="modal-alert" style="display: none;">
+        <div class="content-alert">
+            <button  class="close-alert">X</button>
+            <div class="details-alert">
+                <h2 class="messageAlert">ADD an item!</h2>
+                <i class="fa-solid fa-pen-to-square fa-2xl"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-alert duplicate" style="display: none;">
+        <div class="content-alert">
+            <button class="close-alert cl-duplicate">X</button>
+            <div class="details-alert">
+                <h2 class="messageAlert">Item already exists in the list!</h2>
+                <i class="fa-solid fa-warning fa-2xl"></i>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js" type="module"></script>
 </body>

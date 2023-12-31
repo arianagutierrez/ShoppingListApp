@@ -1,0 +1,40 @@
+@media screen and (max-width: 950px) {
+    .rightSide .shopping-list{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media screen and (max-width: 490px) {
+    .rightSide .shopping-list{
+        font-size: 1.5rem;
+        li .item-details{
+            gap: .65rem;
+        }
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .rightSide .shopping-list{
+        font-size: 1.25rem;
+    }
+
+    .modal .contentModal{
+        h1{
+            font-size: 2.5rem;
+        }
+        .welcomeContent p{
+            font-size: 1.8rem;
+        }
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .leftSide{
+        width: 200px;
+        padding: 1.5rem;
+    }
+
+    .rightSide .shopping-list{
+        font-size: 1rem;
+    }
+}
