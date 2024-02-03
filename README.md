@@ -1,4 +1,4 @@
-# ShoppingListApp
+# Shopping List App
 
 A shopping list app create with HTML, SCSS, JS and Firebase.
 
